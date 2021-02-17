@@ -4,25 +4,25 @@ public class Sale implements Offer{
     private String size = "";
     private Integer price = 0;
 
-    Sale(String size, int price){
+    public Sale(String size, int price){
         this.size = size;
         this.price = price;
     }
 
     @Override
-    String size(){
+    public String size(){
+        return this.size;
+    }
+    @Override
+    public int value(){
+        return this.price;
+    }
+    @Override
+    public int compareTo(Offer offer){
 
     }
     @Override
-    int value(){
-
-    }
-    @Override
-    int compareTo(){
-
-    }
-    @Override
-    String toString(){
+    public String toString(){
         
     }
 }
