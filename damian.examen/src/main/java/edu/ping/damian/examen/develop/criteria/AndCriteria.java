@@ -4,7 +4,6 @@ import java.util.List;
 
 import edu.ping.damian.examen.develop.item.Item;
 import edu.ping.damian.examen.develop.item.Offer;
-import edu.ping.damian.examen.develop.item.Sneaker;
 
 public class AndCriteria implements Criteria {
     private Criteria criteria = null;

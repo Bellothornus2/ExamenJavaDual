@@ -12,6 +12,7 @@ import edu.ping.damian.examen.develop.criteria.Criteria;
 import edu.ping.damian.examen.develop.criteria.LastSale;
 import edu.ping.damian.examen.develop.criteria.Max;
 import edu.ping.damian.examen.develop.criteria.MaxBid;
+import edu.ping.damian.examen.develop.criteria.Min;
 import edu.ping.damian.examen.develop.criteria.MinAsk;
 import edu.ping.damian.examen.develop.criteria.Sales;
 import edu.ping.damian.examen.develop.criteria.Size;
@@ -209,5 +210,32 @@ public class BidTest {
         List<Offer> sizeBid = sizeMaxBid.checkCriteria(sneaker);
 
         Assert.assertEquals(whatWeWant, sizeBid.get(0));
+    }
+
+    @Test
+    public void getMinSizeAndAsks(){
+        Sale sale = new Sale("6", 356);
+        sneaker.add(sale);
+        sneaker.add(new Sale("9.5", 352));
+        sneaker.add(new Sale("9.5", 404));
+        sneaker.add(new Sale("13", 360));
+        Sale lastSale = new Sale("13", 372);
+        sneaker.add(lastSale);
+
+        Ask ask = new Ask("13", 228);
+        sneaker.add(ask);
+        sneaker.add(new Ask("6", 600));
+        Ask whatWeWant = new Ask("9.5", 333);
+        sneaker.add(whatWeWant);
+        sneaker.add(new Ask("9.5", 340));
+        sneaker.add(new Ask("13", 330));
+        sneaker.add(new Ask("13", 330));
+        
+        Criteria size = new Size("9.5");
+        Criteria asks = new Asks();
+        Criteria sizeMinAsk = new Min(size, asks);
+        List<Offer> sizeAsk = sizeMinAsk.checkCriteria(sneaker);
+
+        Assert.assertEquals(whatWeWant, sizeAsk.get(0));
     }
 }
