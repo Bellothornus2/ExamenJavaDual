@@ -1,13 +1,16 @@
 package edu.ping.damian.examen.develop.item;
 
-public class Sneaker implements Item{
+import java.util.List;
+
+public class Sneaker implements Item {
     private String style = "";
     private String name = "";
     private int sale = 0;
     private int ask = 0;
     private int bid = 0;
+    private List<Offer> lista = null;
 
-    Sneaker(String style, String name){
+    public Sneaker(String style, String name){
         this.style = style;
         this.name = name;
     }
@@ -44,11 +47,11 @@ public class Sneaker implements Item{
     }
     @Override
     public void add(Offer offer){
-        
+        this.lista.add(offer);
     }
     @Override
     public List<Offer> offers(){
-        
+        return this.lista;
     }
 
 }
