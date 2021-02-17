@@ -17,12 +17,13 @@ public class Ask implements Offer{
     public int value(){
         return this.ask;
     }
+    
     @Override
-    int compareTo(){
-
+    public int compareTo(Offer offer) {
+        return 0;
     }
     @Override
-    String toString(){
-        
+    public String toString(){
+        return "Hola";
     }
 }

@@ -18,11 +18,11 @@ public class Sale implements Offer{
         return this.price;
     }
     @Override
-    public int compareTo(Offer offer){
-
+    public int compareTo(Offer offer) {
+        return 0;
     }
     @Override
     public String toString(){
-        
+        return "Hola";
     }
 }

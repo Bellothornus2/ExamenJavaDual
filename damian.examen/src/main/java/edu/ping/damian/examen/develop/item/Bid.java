@@ -18,11 +18,11 @@ public class Bid implements Offer{
         return this.bid;
     }
     @Override
-    public int compareTo(){
-
+    public int compareTo(Offer offer) {
+        return 0;
     }
     @Override
     public String toString(){
-        return this.size() + this.value();
+        return "Hola";
     }
 }

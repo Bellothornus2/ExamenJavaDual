@@ -54,5 +54,8 @@ public class Sneaker implements Item {
     public List<Offer> offers(){
         return this.lista;
     }
-
+    @Override
+    public String toString(){
+        return this.getName()+"\n\t\t"+this.getStyle();
+    }
 }
