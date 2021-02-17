@@ -1,5 +1,6 @@
 package edu.ping.damian.examen.develop.item;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Sneaker implements Item {
@@ -8,7 +9,7 @@ public class Sneaker implements Item {
     private int sale = 0;
     private int ask = 0;
     private int bid = 0;
-    private List<Offer> lista = null;
+    private List<Offer> lista = new ArrayList<Offer>();
 
     public Sneaker(String style, String name){
         this.style = style;

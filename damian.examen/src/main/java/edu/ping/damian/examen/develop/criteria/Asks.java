@@ -1,11 +1,17 @@
 package edu.ping.damian.examen.develop.criteria;
 
 import java.util.List;
+import java.util.stream.Collectors;
+
+import edu.ping.damian.examen.develop.item.Ask;
+import edu.ping.damian.examen.develop.item.Item;
+import edu.ping.damian.examen.develop.item.Offer;
 
 public class Asks implements Criteria{
     
     @Override
-    List<Offer> checkCriteria(Item){
-
+    public List<Offer> checkCriteria(Item item){
+        List<Offer> criteria = item.offers().stream().filter(n -> n instanceof Ask).collect(Collectors.toList());
+        return criteria;
     }
 }
