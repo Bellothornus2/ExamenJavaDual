@@ -1,9 +1,7 @@
 package edu.ping.damian.examen.develop.criteria;
 
-public class Bids implements Criteria{
+public class Sales implements Criteria{
     
-    Bids(){}
-
     @Override
     List<Offer> checkCriteria(Item){
         

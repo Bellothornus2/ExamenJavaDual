@@ -1,11 +1,11 @@
 package edu.ping.damian.examen.develop.criteria;
 
-public class Bids implements Criteria{
-    
-    Bids(){}
+import java.util.List;
 
+public class Asks implements Criteria{
+    
     @Override
     List<Offer> checkCriteria(Item){
-        
+
     }
 }
