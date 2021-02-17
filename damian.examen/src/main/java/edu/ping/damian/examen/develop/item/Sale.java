@@ -1,12 +1,12 @@
 package edu.ping.damian.examen.develop.item;
 
-public class Bid implements Offer{
+public class Sale implements Offer{
     private String size = "";
-    private Integer bid = 0;
+    private Integer price = 0;
 
-    Bid(String size, int bid){
+    Sale(String size, int price){
         this.size = size;
-        this.bid = bid;
+        this.price = price;
     }
 
     @Override
