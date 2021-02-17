@@ -1,6 +1,5 @@
 package edu.ping.damian.examen.develop.criteria;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import edu.ping.damian.examen.develop.item.Offer;
