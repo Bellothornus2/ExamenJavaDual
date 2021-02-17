@@ -24,6 +24,6 @@ public class Ask implements Offer{
     }
     @Override
     public String toString(){
-        return "Hola";
+        return "\t\t" + this.size() + "\t" + this.value()+"\n";
     }
 }
